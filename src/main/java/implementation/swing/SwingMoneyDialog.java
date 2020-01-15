@@ -1,18 +1,19 @@
-package view;
+package implementation.swing;
 
 import model.Currency;
 import model.Money;
+import view.MoneyDialog;
 
 import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class SwingMoneyDialog extends JPanel implements MoneyDialog{
-    List<Currency> currencyList;
+public class SwingMoneyDialog extends JPanel implements MoneyDialog {
+    private List<Currency> currencyList;
     private JComboBox from;
     private JComboBox to;
-    JTextField text;
+    private JTextField text;
 
 
     public SwingMoneyDialog(List<Currency> currencyList) {

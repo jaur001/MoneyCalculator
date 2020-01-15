@@ -1,4 +1,4 @@
-package view;
+package implementation.swing;
 
 import model.Currency;
 
@@ -19,10 +19,8 @@ public class MainFrame extends JFrame {
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
         dialog = new SwingMoneyDialog(currencyList);
-        dialog.setPreferredSize(new Dimension(this.getSize().height/2,this.getSize().width/2));
         this.getContentPane().add(BorderLayout.NORTH,dialog);
         display = new SwingMoneyDisplay();
-        display.setPreferredSize(new Dimension(this.getSize().height/2,this.getSize().width/2));
         this.getContentPane().add(BorderLayout.CENTER,display);
         setVisible(true);
     }
